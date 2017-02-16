@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <string name="app_name">Coffee order</string>
+    <string name="hint_name">Name</string>
+    <string name="toppings">Toppings</string>
+    <string name="whipped_cream">Whipped cream</string>
+    <string name="chocolate">Chocolate</string>
+    <string name="order">Order</string>
+    <string name="order_something">Order something! :)</string>
+    <string name="order_summary">Order summary</string>
+    <string name="quantity">Quantity</string>
+    <string name="send_order">Send the order</string>
+    <string name="coffe_order">Coffee order</string>
+    <string name="confirm">Yes</string>
+    <string name="deny">No</string>
+    <string name="name">Name: </string>
+    <string name="total">Total: </string>
+    <string name="add_cream">Add whipped cream?&#160;</string>
+    <string name="add_chocolate">Add chocolate?&#160;</string>
+    <string name="thanks">Thank you!</string>
+</resources>

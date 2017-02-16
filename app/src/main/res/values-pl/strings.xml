@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <string name="app_name">Zamów kawę</string>
+    <string name="hint_name">Imię</string>
+    <string name="toppings">Dodatki</string>
+    <string name="whipped_cream">Bita śmietana</string>
+    <string name="chocolate">Czekolada</string>
+    <string name="quantity">Ilość</string>
+    <string name="order_summary">Podsumowanie zamówienia</string>
+    <string name="order_something">Zamów coś! :)</string>
+    <string name="order">Złóż zamówienie</string>
+
+    <!-- MainActivity -->
+    <string name="send_order">Złóż zamówienie</string>
+    <string name="coffe_order">Zamów kawę</string>
+    <string name="confirm">Tak</string>
+    <string name="deny">Nie</string>
+    <string name="name">Imię: </string>
+    <string name="total">Cena: </string>
+    <string name="add_cream">Dodać bitą śmietanę?&#160;</string>
+    <string name="add_chocolate">Dodać czekoladę?&#160;</string>
+    <string name="thanks">Dziękujemy!</string>
+</resources>

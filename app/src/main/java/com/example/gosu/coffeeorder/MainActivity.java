@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
+
         quantityView = (TextView) findViewById(R.id.quantityView);
         summary = (TextView) findViewById(R.id.summary);
         checkCream = (CheckBox) findViewById(R.id.checkCream);
@@ -35,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         orderButton = (Button) findViewById(R.id.orderButton);
         getName = (EditText) findViewById(R.id.getName);
         ImageView iv = new ImageView(this);
+
+        //listener for sending Intent (mail)
         orderButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,10 +46,12 @@ public class MainActivity extends AppCompatActivity {
                 share.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.coffe_order));
                 share.putExtra(Intent.EXTRA_TEXT, finalText + "");
                 if (share.resolveActivity(getPackageManager()) != null) {
-                    startActivity(Intent.createChooser(share, getString(R.string.send_order))); //pokazanie okna share
+                    startActivity(Intent.createChooser(share, getString(R.string.send_order))); //showing share window
                 }
             }
         });
+
+        //listener for checking EditText state
         getName.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -65,22 +70,26 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //handling minus button
     public void minusOne(View view) {
         if (quantity > 0) quantity--;
         displayQuantity(quantity);
         makeOrder();
     }
 
+    //handling plus button
     public void plusOne(View view) {
         quantity++;
         displayQuantity(quantity);
         makeOrder();
     }
 
+    //function for displaying amount of cups
     public void displayQuantity(int quantity) {
         quantityView.setText(quantity + "");
     }
 
+    //function checking state of the order and showing summary
     public void makeOrder() {
         String whipped, chocolate;
         String price = NumberFormat.getCurrencyInstance().format(quantity * 5);
@@ -104,10 +113,12 @@ public class MainActivity extends AppCompatActivity {
         finalText = summary.getText().toString();
     }
 
+    //handling cream CheckBox
     public void checkCream(View view) {
         makeOrder();
     }
 
+    //handling chocolate CheckBox
     public void checkChocolate(View view) {
         makeOrder();
     }
